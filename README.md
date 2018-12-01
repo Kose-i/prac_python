@@ -1,2 +1,2 @@
 # prac_python
-This practive for python
+This practice for python
