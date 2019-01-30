@@ -7,3 +7,5 @@ root = tk.Tk()
 root.geometry('800x460')
 
 root.title('test')
+
+root.mainloop()
