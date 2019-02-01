@@ -20,6 +20,7 @@ cmdmenu.add_command(label='閉じる', command=finish_callback)
 checkmenu = tk.Menu(menubar)
 menubar.add_cascade(label='チェックメニュー', menu=checkmenu)
 checkmenu.add_checkbutton(label='test1')
+checkmenu.add_checkbutton(label='test2')
 
 radiomenu = tk.Menu(menubar)
 menubar.add_cascade(label='ラジオメニュー', menu=radiomenu)
@@ -27,6 +28,11 @@ radiomenu.add_radiobutton(
   label='test1',
   variable = tk.IntVar(),
   value = 0
+)
+radiomenu.add_radiobutton(
+  label='test2',
+  variable = tk.IntVar(),
+  value = 1
 )
 
 separatormenu = tk.Menu(menubar)
