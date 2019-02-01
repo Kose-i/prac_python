@@ -23,15 +23,16 @@ checkmenu.add_checkbutton(label='test1')
 checkmenu.add_checkbutton(label='test2')
 
 radiomenu = tk.Menu(menubar)
+radio_action = tk.IntVar()
 menubar.add_cascade(label='ラジオメニュー', menu=radiomenu)
 radiomenu.add_radiobutton(
   label='test1',
-  variable = tk.IntVar(),
+  variable = radio_action,
   value = 0
 )
 radiomenu.add_radiobutton(
   label='test2',
-  variable = tk.IntVar(),
+  variable = radio_action,
   value = 1
 )
 
