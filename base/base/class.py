@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 class A:
   def __init__(self): #constructor
     print("__init__")
@@ -8,6 +9,7 @@ class A:
   def get_name(self): #function getter
     return self.name
 
-x = A()
-x.set_name("hoge")
-print(x.get_name())
+if __name__=='__main__':
+  x = A()
+  x.set_name("hoge")
+  print(x.get_name())
