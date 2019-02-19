@@ -25,8 +25,16 @@ import shutil
 def func5():
   shutil.copyfile("test.txt", "test2.txt")
 
+import glob
 def func6():
-  pass
+  print(glob.glob('*'))
+
+import tempfile
+def func7():
+  tmpfd, tmpname = tempfile.mkstemp(dir='.')
+  print(tmpname)
+  f = os.fdopen(tmpfd, 'w+b')
+  f.close()
 
 if __name__=='__main__':
   print("\nfunc1()")
@@ -41,3 +49,5 @@ if __name__=='__main__':
   func5()
   print("\nfunc6()")
   func6()
+  print("\nfunc7()")
+  func7()
