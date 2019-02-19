@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import csv
  
 mojiretu = "Hello World first csv file"
