@@ -6,9 +6,8 @@ def func1():
   f.close()
 
 def func2():
-  f = open("test.txt", 'r')
-  print(f.read())
-  f.close()
+  with open("test.txt", 'r') as f:
+    print(f.read())
 
 import codecs
 def func3():
