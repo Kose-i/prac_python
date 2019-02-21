@@ -21,9 +21,11 @@ def func2():
   print(y)
 
 def func3():
-  x = [[i+j for i in range(1+j,3+j)] for j in range(4)]
+  x = [i for i in range(0,5)]
+  y = [[i+j for i in range(1+j,3+j)] for j in range(4)]
   
   print(x)
+  print(y)
 
 def func4():
   x = list((1,2,3))
