@@ -24,13 +24,19 @@ def func3():
   x = [i for i in range(0,5)]
   y = [[i+j for i in range(1+j,3+j)] for j in range(4)]
   
-  print(x)
+  print("[i for i in range(0,5)]")
+  print("x=",x)
   print(y)
 
 def func4():
   x = list((1,2,3))
   y = list((1,2,3))
   z = list((1,2,3))
+  print(x)
+  print("len(x) = ", len(x))
+  print(y)
+  print("len(y) = ", len(y))
+  print(z)
 
   x.append('hello')
   y.extend(['hello', 'world'])
@@ -39,7 +45,9 @@ def func4():
   del(y[0])
 
   print(x)
+  print("len(x) = ", len(x))
   print(y)
+  print("len(y) = ", len(y))
   print(z)
   
 def func5():
