@@ -73,6 +73,18 @@ def func6():
   print("any( x )=",any(x))
   print("all( x )=", all(x))
 
+def func7():
+    x = [1,2]
+    print("len(x)=",len(x))
+    del(x[0])
+    print("len(x)=",len(x))
+
+def func8():
+    y = []
+    y.append(3)
+    x = list(y)
+    print(x)
+
 if __name__ == '__main__':
   print("\nfunc1()")
   func1()
@@ -86,3 +98,8 @@ if __name__ == '__main__':
   func5()
   print("\nfunc6()")
   func6()
+  print("\nfunc7()")
+  func7()
+  print("\nfunc8()")
+  func8()
+
