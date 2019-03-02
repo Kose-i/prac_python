@@ -37,6 +37,7 @@ def func4():
   print(y)
   print("len(y) = ", len(y))
   print(z)
+  print("len([]) = ", len([]))
 
   x.append('hello')
   y.extend(['hello', 'world'])
@@ -57,6 +58,7 @@ def func5():
   print("x.index(3)=", x.index(3))
   print("3 in x=", 3 in x)
   print("x.count(2)=", x.count(2))
+  print("[].count(1)=", [].count(1))
   print("len( x )=", len(x))
   print("max( x )=", max(x))
   print("min( x )=", min(x))
