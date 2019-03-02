@@ -23,22 +23,35 @@ def func5(x):
 def func6(x,func1, func2):
   return func2(func1(x))
 
+def func7(lists):
+  print(lists)
+  lists[0] = 1
+
 if __name__=='__main__':
   print("\nfunc1()")
   func1()
   func1(func1_target='python')
+
   print("\nfunc2()")
   func2(*['test1', 'test2'])
+
   print("\nfunc3()")
   func3(**{'dic1':'1', 'dic2':'2'})
+
   print("\nfunc4()")
   x = 2
   print("func4()=",func4(x))
   print("x=",x,",y=",y)
+
   print("\nfunc5()")
   power = func5
   print("power( 3 )=", power(3))
+
   print("\nfunc6")
   lambda_test = lambda x:x+1
   print("func6(2, lambda_test, func5)=", func6(2, lambda_test, func5))
 
+  print("\nfunc7()")
+  lists = [3,3,3,3]
+  func7(lists)
+  print(lists)
