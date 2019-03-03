@@ -26,6 +26,21 @@ def test1():
 
 def test2():
     print("\ntest2")
+    a = np.array([[1,2,3],[4,5,6]])
+    print("a=",a)
+    a = np.arange(15.).reshape(3,5)
+    print("a=",a)
+    print("a.shape=", a.shape)
+    print("a.ndim=", a.ndim)
+    print("a.size=", a.size)
+
+def test3():
+    print("\ntest3")
+    a = np.array([1,2,3])
+    print("a=",a)
+    b = a*3
+    print("a*3=", b)
+#    c = 
 
 if __name__=='__main__':
     test1()
