@@ -33,6 +33,11 @@ def test2():
     print("a.shape=", a.shape)
     print("a.ndim=", a.ndim)
     print("a.size=", a.size)
+    b = a.reshape(5, -1)
+    print("b = a.reshape(5, -1)=", b)
+    print("b.ravel()=", b.ravel())
+    print("b[:, np.newaxis]=", b[:,np.newaxis])
+    print("b[:, None]=", b[:, None])
 
 def test3():
     print("\ntest3")
