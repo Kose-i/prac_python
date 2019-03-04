@@ -75,6 +75,16 @@ def test5():
 
     print("\nnp.arange(9.).reshape(3,3)=", np.arange(9.).reshape(3,3))
 
+def test6():
+    print("\ntest6")
+    a = np.arange(4)
+    b = np.arange(3,7)
+    print("\na=",a)
+    print("\nb=",b)
+    print("\na+b=",a+b)
+    print("\na*b=", a*b)
+    print("\na@b=", a@b) # python3.5 latter
+    print("\nnp.dot(a, b)=", np.dot(a, b))
 
 if __name__=='__main__':
     test1()
@@ -82,4 +92,5 @@ if __name__=='__main__':
     test3()
     test4()
     test5()
+    test6()
 
