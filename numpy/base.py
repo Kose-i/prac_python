@@ -6,6 +6,7 @@ def test1():
     x = np.array([1,2,3,4,5])
     print(x)
     
+    print("np.sum(x)=",np.sum(x)) # sum
     print("np.mean(x)=",np.mean(x)) # average
     print("np.var(x)=",np.var(x)) # dispertion
     print("np.std(x)=",np.std(x)) # standard diviation
@@ -60,9 +61,25 @@ def test4():
     print("\nb=", b)
     print("\nnumpy.r_[a,b]=",np.r_[a,b])
 
+def test5():
+    print("\ntest5")
+    a = np.arange(3.,8.)
+    print("\na=",a)
+    print("\nnp.exp(a)=",np.exp(a))
+    print("\nnp.log(a)=",np.log(a))
+    print("\nnp.sqrt(a)=",np.sqrt(a))
+    print("\na+3=",a+3)
+    print("\na*3=",a*3)
+    print("\na>4=",a>4)
+    print("\na[a>4]=",a[a>4])
+
+    print("\nnp.arange(9.).reshape(3,3)=", np.arange(9.).reshape(3,3))
+
+
 if __name__=='__main__':
     test1()
     test2()
     test3()
     test4()
+    test5()
 
