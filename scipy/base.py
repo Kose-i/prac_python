@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from scipy import sparse
+from scipy import linalg
 
 def test1():
     print("\ntest1")
@@ -34,5 +35,21 @@ def test1():
     print("\ntype(a.tocsc())=", type(a_csc))
     print("a.tocsc().dot(b.tocsc())=",a_csc.dot(b_csc).toarray())
 
+def test2():
+    print("\ntest2")
+    """
+    (3 1 1)(x) (1)
+    (1 2 1)(y)=(2)
+    (0-1 1)(z) (3) solve x,y,z
+    """
+    a = np.array([[3,1,1],[1,2,1],[0,-1,1]])
+    b = np.array([1,2,3])
+    print("\na=",a)
+    print("b=",b)
+    lu, p = linalg.lu_factor(a)
+    print("lu, p = linalg.lu_factor(a)")
+    print("x,y,z=linalg.lu_solve((lu, p), b)",linalg.lu_solve((lu, p),b))
+
 if __name__=='__main__':
     test1()
+    test2()
