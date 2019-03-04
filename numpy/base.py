@@ -47,8 +47,22 @@ def test3():
     print("\nnp.empty((5,5))=",np.empty((5,5)))
     print("\nnp.linspace(0,1,10)=", np.linspace(0,1,10))
 
+def test4():
+    print("\ntest4")
+    a = np.array([[1,1,1],[1,1,1]])#2*3
+    print("\na=", a)
+    b = np.array([[2,2,2,2],[2,2,2,2]])#2*4
+    print("\nb=", b)
+    print("\nnumpy.c_[a,b]=",np.c_[a,b])
+    a = np.array([[1,1,1],[1,1,1]])#2*3
+    print("\na=", a)
+    b = np.array([[2,2,2],[2,2,2],[2,2,2]])#3*3
+    print("\nb=", b)
+    print("\nnumpy.r_[a,b]=",np.r_[a,b])
+
 if __name__=='__main__':
     test1()
     test2()
     test3()
+    test4()
 
