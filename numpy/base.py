@@ -41,13 +41,14 @@ def test2():
 
 def test3():
     print("\ntest3")
-    a = np.array([1,2,3])
-    print("a=",a)
-    b = a*3
-    print("a*3=", b)
-#    c = 
+    print("\nnp.zeros((2,3))=",np.zeros((2,3)))
+    print("\nnp.ones((3,3))=",np.ones((3,3)))
+    print("\nnp.ones((2,2))*3=", np.ones((2,2))*3)
+    print("\nnp.empty((5,5))=",np.empty((5,5)))
+    print("\nnp.linspace(0,1,10)=", np.linspace(0,1,10))
 
 if __name__=='__main__':
     test1()
     test2()
+    test3()
 
