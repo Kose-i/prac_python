@@ -6,7 +6,6 @@ root = tk.Tk()
 root.geometry('800x460')
 root.title('image')
 
-root.add
 
 canvas = tk.Canvas(
   root,
@@ -16,6 +15,15 @@ canvas = tk.Canvas(
 #  bg = 1,
   bd = 2,
 )
+image_path = tk.PhotoImage(file="img/senryuGirl.png")
+canvas.create_image(
+    0,
+    0,
+    image = image_path,
+    anchor = tk.NW
+)
+
+#root.add
 canvas.place(x = 1, y = 0)
 
 root.mainloop()
