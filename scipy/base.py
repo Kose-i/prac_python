@@ -2,6 +2,7 @@
 
 from scipy import sparse
 from scipy import linalg
+import numpy as np
 
 def test1():
     print("\ntest1")
