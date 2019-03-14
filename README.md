@@ -15,3 +15,5 @@
 [実践Python3](https://www.oreilly.co.jp/books/9784873117393/)
 
 [機械学習のエッセンス](https://www.sbcr.jp/products/4797393965.html)
+
+[Pythonで動かして学ぶ！あたらしい機械学習の教科書](https://www.shoeisha.co.jp/book/detail/9784798144986)
