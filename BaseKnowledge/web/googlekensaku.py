@@ -4,6 +4,7 @@ from urllib import parse
 import requests
 from bs4 import BeautifulSoup
 
+import sys # For INPUT args
 
 class Google:
     def __init__(self):
@@ -68,9 +69,8 @@ class Google:
             links = [js['ou'] for js in jsons]
         return links
 
-def main():
+def main(Word='test'):
     print("mainstart")
-    Word = 'test'
     google = Google()
     # テキスト検索
     result = google.Search(Word, type='text', maximum=3)
@@ -78,4 +78,5 @@ def main():
       print(e)
 
 if __name__=='__main__':
-    main()
+    args = sys.argv
+    main(args[1])
