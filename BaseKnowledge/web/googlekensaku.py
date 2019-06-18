@@ -69,14 +69,35 @@ class Google:
             links = [js['ou'] for js in jsons]
         return links
 
-def main(Word='test'):
+def main(input_filename, output_filename='output.txt'):
     print("mainstart")
     google = Google()
     # テキスト検索
-    result = google.Search(Word, type='text', maximum=3)
-    for _, e in enumerate(result):
-      print(e)
+    Words=[]
+    with open(input_filename) as ifs:
+        while True:
+          s = ifs.readline()
+          if not s:
+              break
+          Words.append(s)
+    print("read finish")
+    print(Words)
+    with open(output_filename, mode='w') as ofs:
+        for _,Word in enumerate(Words):
+            result = google.Search(Word, type='text', maximum=3)
+            for _, e in enumerate(result):
+                ofs.write(e)
+                ofs.write('\n')
 
 if __name__=='__main__':
     args = sys.argv
-    main(args[1])
+    print('file name:', args[1])
+    try:
+        if len(args) == 2:
+            main(args[1])
+        elif len(args) == 3:
+            main(args[1], args[2])
+        else:
+            print("Error len(args) != 2 || 3")
+    except(ValueError):
+        print('ValuError happen')
