@@ -85,9 +85,17 @@ def main(input_filename, output_filename='output.txt'):
     with open(output_filename, mode='w') as ofs:
         for _,Word in enumerate(Words):
             result = google.Search(Word, type='text', maximum=3)
+            counter = 0
             for _, e in enumerate(result):
-                ofs.write(e)
-                ofs.write('\n')
+              ofs.write(e)
+              ofs.write('\n')
+            #    if counter == 3:
+            #      break
+            #    if e.find('.html') != -1:
+            #      ofs.write(e)
+            #      ofs.write('\n')
+            #      #counter = counter+1
+            #print(counter)
 
 if __name__=='__main__':
     args = sys.argv
