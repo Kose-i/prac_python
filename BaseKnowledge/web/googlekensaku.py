@@ -84,6 +84,7 @@ def main(input_filename, output_filename='output.txt'):
     print(Words)
     with open(output_filename, mode='w') as ofs:
         for _,Word in enumerate(Words):
+            ofs.write(Word)
             result = google.Search(Word, type='text', maximum=3)
             counter = 0
             for _, e in enumerate(result):
