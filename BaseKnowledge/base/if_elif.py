@@ -11,3 +11,6 @@ if __name__=='__main__':
 
   b = 2
   print("b >= 0") if b >= 0 else print("b < 0")
+
+  if a > 0 and b > 0:
+      print("a > 0 and b > 0")
